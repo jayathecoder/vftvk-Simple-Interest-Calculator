@@ -1,34 +1,71 @@
-function compute()
+body 
 {
-    var principal = document.getElementById("principal").value;
-
-    if(principal == "" || principal <= 0)
-    {
-        alert("Enter a positive number");
-        document.getElementById("principal").focus();
-        return;
-    }
-
-    var rate = document.getElementById("rate").value;
-    var years = document.getElementById("years").value;
-    var interest = principal * years * rate / 100;
-
-    var dateNow = new Date();
-    var yearNow = parseInt(dateNow.getFullYear()) + parseInt(years);
-    
-    var resultDisplay = document.getElementById("result");
-    resultDisplay.innerHTML = "If you deposit " + "<span class='highlight'>" + principal + "</span>."  + ", <br> at an interest rate of "+ "<span class='highlight'>" + rate + "</span>%." + "<br> You will receive an amount of " + "<span class='highlight'>" + interest + "</span>" + ", <br> in the year " + "<span class='highlight'>" + yearNow + "</span>";
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial;
 }
 
-function SliderValue()
+h1
 {
-    var slider = document.getElementById("rate");
-    var output = document.getElementById("rate_display");
-    output.innerHTML = slider.value; // Display the default slider value
+    color: grey;
+    font-family: Verdana;
+}
 
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() 
-    {
-        output.innerHTML = this.value;
-    }  
+.maindiv
+{
+    background-color: #ffffff;
+    color: #000000;
+    width: 500px;
+    padding: 20px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #result
+{
+    display: none;
+} */
+
+.contents
+{
+    margin-left: 80px;
+}
+
+table td
+{
+    padding-bottom: 10px;
+}
+
+#compute
+{
+    margin-bottom: 10px;
+    background-color: grey;
+    color: white;
+    height: 40px;
+    width: 325px;
+}
+#principal{
+    height: 25px;
+    width: 190px;
+}
+
+#years{
+    height: 35px;
+    width: 200px;
+}
+
+#footer
+{
+    margin-top: 10px;
+}
+
+.labels
+{
+    width: 120px;
+}
+
+.highlight
+{
+    background-color: #ffff00;
 }
